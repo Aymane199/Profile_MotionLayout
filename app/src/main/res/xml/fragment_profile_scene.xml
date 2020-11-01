@@ -431,67 +431,50 @@
     </Transition>
     <Transition
         motion:constraintSetStart="@+id/start"
-        motion:constraintSetEnd="@+id/state2"
+        motion:constraintSetEnd="@+id/state3"
         motion:duration="1000">
-        <OnClick motion:targetId="@+id/ExtendedFloatingActionButtonMore"
-            motion:clickAction="toggle"/>
+        <OnClick
+            motion:targetId="@+id/ExtendedFloatingActionButtonMore"
+            />
         <KeyFrameSet>
-            <KeyAttribute
-                motion:motionTarget="@+id/textViewText"
-                motion:framePosition="10"
-                android:alpha="0" />
-            <KeyAttribute
-                motion:motionTarget="@+id/textViewText"
-                motion:framePosition="10"
-                android:alpha="0" />
-            <KeyAttribute
-                motion:motionTarget="@+id/textViewFullName"
-                motion:framePosition="10"
-                android:alpha="0" />
-            <KeyAttribute
-                motion:motionTarget="@+id/textViewText"
-                motion:framePosition="70"
-                android:alpha="0" />
-            <KeyAttribute
-                motion:motionTarget="@+id/textViewFullName"
-                motion:framePosition="70"
-                android:alpha="0" />
-            <KeyAttribute
-                motion:motionTarget="@+id/floatingActionButtonInfo"
-                motion:framePosition="10"
-                android:alpha="0" />
-            <KeyAttribute
-                motion:motionTarget="@+id/floatingActionButtonCV"
-                motion:framePosition="10"
-                android:alpha="0" />
-            <KeyAttribute
-                motion:motionTarget="@+id/floatingActionButtonInfo"
-                motion:framePosition="70"
-                android:alpha="0" />
-            <KeyAttribute
-                motion:motionTarget="@+id/floatingActionButtonCV"
-                motion:framePosition="70"
-                android:alpha="0" />
-            <KeyAttribute
+            <KeyAttribute motion:framePosition="99"
+                motion:motionTarget="@+id/whiteShadow"
+                android:alpha="0"
+                />
+            <KeyAttribute motion:framePosition="80"
+                motion:motionTarget="@+id/textViewGoal"
+                android:alpha="0"
+                />
+            <KeyCycle
                 motion:motionTarget="@+id/CardViewPhone"
-                motion:framePosition="70"
-                android:alpha="0" />
-            <KeyAttribute
-                motion:motionTarget="@+id/CardViewGithub"
-                motion:framePosition="70"
-                android:alpha="0" />
-            <KeyAttribute
-                motion:motionTarget="@+id/CardViewLinkdin"
-                motion:framePosition="70"
-                android:alpha="0" />
-            <KeyAttribute
+                motion:framePosition="0"
+                android:translationY="10dp"
+                motion:wavePeriod="1"
+                motion:waveShape="sin"/>
+            <KeyCycle
                 motion:motionTarget="@+id/CardViewMail"
-                motion:framePosition="70"
-                android:alpha="0" />
-            <KeyAttribute
+                motion:framePosition="0"
+                android:translationY="13dp"
+                motion:wavePeriod="1"
+                motion:waveShape="sin"/>
+            <KeyCycle
+                motion:motionTarget="@+id/CardViewGithub"
+                motion:framePosition="0"
+                android:translationY="20dp"
+                motion:wavePeriod="1"
+                motion:waveShape="sin"/>
+            <KeyCycle
                 motion:motionTarget="@+id/CardViewPlayStore"
-                motion:framePosition="70"
-                android:alpha="0" />
+                motion:framePosition="0"
+                android:translationY="13dp"
+                motion:wavePeriod="1"
+                motion:waveShape="sin"/>
+            <KeyCycle
+                motion:motionTarget="@+id/CardViewLinkdin"
+                motion:framePosition="0"
+                android:translationY="10dp"
+                motion:wavePeriod="1"
+                motion:waveShape="sin"/>
         </KeyFrameSet>
     </Transition>
     <Transition
