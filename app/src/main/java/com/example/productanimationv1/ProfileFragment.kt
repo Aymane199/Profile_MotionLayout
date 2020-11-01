@@ -1,5 +1,6 @@
 package com.example.productanimationv1
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -32,42 +33,79 @@ class ProfileFragment : Fragment() {
         val motionLayout = view.findViewById<MotionLayout>(R.id.layout);
 
         view.findViewById<CardView>(R.id.CardViewLinkdin).setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("http://aymane199.github.io/CV-Aymane-RIZKE-2020.pdf")
-            startActivity(intent)
+            displayCV()
         }
 
-        view.findViewById<CardView>(R.id.CardViewGithub)
+        view.findViewById<CardView>(R.id.CardViewGithub).setOnClickListener {
+            openGithub()
+        }
 
         view.findViewById<CardView>(R.id.CardViewMail).setOnClickListener {
-            val recipientList: String = "aymanerizke199@gmail.com"
-            val recipients =
-                recipientList.split(",".toRegex()).toTypedArray()
-            val intent = Intent(Intent.ACTION_SEND)
-            intent.putExtra(Intent.EXTRA_EMAIL, recipients)
-            intent.type = "message/rfc822"
-            startActivity(intent)
+            sendMail()
         }
 
         view.findViewById<CardView>(R.id.CardViewPhone).setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.parse("tel:+3376027137")
-            startActivity(intent)
+            callPhone()
         }
-        view.findViewById<CardView>(R.id.CardViewPlayStore)
+        view.findViewById<CardView>(R.id.CardViewPlayStore).setOnClickListener {
+            openPlayStore()
+        }
 
         view.findViewById<FloatingActionButton>(R.id.floatingActionButtonInfo).setOnClickListener { showInfoDialog() }
 
         view.findViewById<FloatingActionButton>(R.id.floatingActionButtonCV).setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("http://aymane199.github.io/CV-Aymane-RIZKE-2020.pdf")
-            startActivity(intent)
+            displayCV()
         }
 
 
         return view
     }
 
+    private fun callPhone() {
+        val intent = Intent(Intent.ACTION_DIAL)
+        intent.data = Uri.parse("tel:+3376027137")
+        startActivity(intent)
+    }
+
+    private fun sendMail() {
+        val recipientList: String = "aymanerizke199@gmail.com"
+        val recipients =
+                recipientList.split(",".toRegex()).toTypedArray()
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.putExtra(Intent.EXTRA_EMAIL, recipients)
+        intent.type = "message/rfc822"
+        startActivity(intent)
+    }
+
+    private fun displayCV() {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("http://aymane199.github.io/CV-Aymane-RIZKE-2020.pdf")
+        startActivity(intent)
+    }
+
+    private fun openGithub() {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://github.com/Aymane199")
+        startActivity(intent)
+    }
+
+    private fun openPlayStore() {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://play.google.com/store/apps/developer?id=Aymane+RIZKE")
+        startActivity(intent)
+    }
+
+    private fun openLinkdin() {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://www.linkedin.com/in/aymane-rizke/")
+        startActivity(intent)
+    }
+
+    private fun openCodeSource() {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://github.com/Aymane199/Profile_MotionLayout")
+        startActivity(intent)
+    }
 
     fun showInfoDialog(){
 
@@ -83,7 +121,7 @@ class ProfileFragment : Fragment() {
         builder.setMessage(message)
 
         // alert dialog buttons
-        builder.setPositiveButton("Go to code source",null)
+        builder.setPositiveButton("Go to code source", DialogInterface.OnClickListener { dialog, which -> openCodeSource() })
         builder.setNeutralButton("Cancel",null)
 
         // finally, create the alert dialog and show it

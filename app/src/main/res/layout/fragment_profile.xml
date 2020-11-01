@@ -76,9 +76,9 @@
         android:text="@string/goal"
         android:textColor="#FFFFFF"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@id/cardViewBackground"
-        app:layout_constraintStart_toStartOf="@id/cardViewBackground"
-        app:layout_constraintTop_toTopOf="@id/cardViewBackground" />
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.cardview.widget.CardView

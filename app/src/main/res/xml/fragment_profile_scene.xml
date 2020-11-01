@@ -518,19 +518,19 @@
             <KeyCycle
                 motion:motionTarget="@+id/CardViewMail"
                 motion:framePosition="0"
-                android:translationY="20dp"
+                android:translationY="13dp"
                 motion:wavePeriod="1"
                 motion:waveShape="sin"/>
             <KeyCycle
                 motion:motionTarget="@+id/CardViewGithub"
                 motion:framePosition="0"
-                android:translationY="25dp"
+                android:translationY="20dp"
                 motion:wavePeriod="1"
                 motion:waveShape="sin"/>
             <KeyCycle
                 motion:motionTarget="@+id/CardViewPlayStore"
                 motion:framePosition="0"
-                android:translationY="20dp"
+                android:translationY="13dp"
                 motion:wavePeriod="1"
                 motion:waveShape="sin"/>
             <KeyCycle
