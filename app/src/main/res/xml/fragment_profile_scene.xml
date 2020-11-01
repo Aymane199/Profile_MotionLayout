@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/state1">
+        <Constraint
+            android:id="@+id/imageViewProfile"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:rotationX="-74"
+            motion:layout_constraintVertical_bias="0.74"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            />
+        <Constraint
+            android:id="@+id/cardViewBackground"
+            android:layout_width="250dp"
+            android:layout_height="300dp"
+            android:rotationX="0"
+            motion:layout_constraintVertical_bias="0.33"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customFloatValue="16" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/textViewText"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:alpha="1"
+            motion:layout_constraintEnd_toEndOf="@id/cardViewBackground"
+            motion:layout_constraintBottom_toBottomOf="@id/cardViewBackground"
+            motion:layout_constraintTop_toBottomOf="@id/textViewFullName"
+            motion:layout_constraintStart_toStartOf="@id/cardViewBackground"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"/>
+        <Constraint
+            android:id="@+id/textViewFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:alpha="1"
+            motion:layout_constraintEnd_toEndOf="@id/cardViewBackground"
+            motion:layout_constraintTop_toTopOf="@id/cardViewBackground"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"/>
+        <Constraint
+            android:id="@+id/ExtendedFloatingActionButtonMore"
+            android:alpha="0"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/state2" >
+        <Constraint
+            android:id="@+id/cardViewBackground"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/textViewTitle"
+            android:alpha="0"/>
+        <Constraint
+            android:id="@+id/imageViewProfile"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:rotationX="0"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonCV"
+            android:layout_marginStart="16dp" />
+        <Constraint
+            android:id="@+id/textViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"/>
+        <Constraint
+            android:id="@+id/textViewFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toEndOf="@id/imageViewProfile"
+            motion:layout_constraintTop_toTopOf="@id/imageViewProfile"
+            android:layout_marginStart="16dp"
+            android:elevation="6dp"
+            android:alpha="1"/>
+
+        <Constraint
+            android:id="@+id/floatingActionButtonInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/cardViewBackground"
+            motion:layout_constraintBottom_toBottomOf="@id/cardViewBackground"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:elevation="6dp"
+            android:alpha="1"
+            />
+        <Constraint
+            android:id="@+id/floatingActionButtonCV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/cardViewBackground"
+            motion:layout_constraintBottom_toBottomOf="@id/cardViewBackground"
+            motion:layout_constraintEnd_toStartOf="@id/floatingActionButtonInfo"
+            android:layout_marginEnd="16dp"
+            android:elevation="6dp"
+            android:alpha="1" />
+        <Constraint
+            android:id="@+id/guideline"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            android:layout_marginTop="50dp"
+            />
+        <Constraint
+            android:id="@+id/CardViewPhone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@id/CardViewMail"
+            android:alpha="1"
+            />
+        <Constraint
+            android:id="@+id/CardViewMail"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            motion:layout_constraintStart_toEndOf="@id/CardViewPhone"
+            motion:layout_constraintEnd_toStartOf="@id/CardViewGithub"
+            android:alpha="1"
+            />
+        <Constraint
+            android:id="@+id/CardViewGithub"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            motion:layout_constraintStart_toEndOf="@id/CardViewMail"
+            motion:layout_constraintEnd_toStartOf="@id/CardViewPlayStore"
+            android:alpha="1"
+        />
+        <Constraint
+            android:id="@+id/CardViewPlayStore"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            motion:layout_constraintStart_toEndOf="@id/CardViewGithub"
+            motion:layout_constraintEnd_toStartOf="@id/CardViewLinkdin"
+            android:alpha="1"
+        />
+
+        <Constraint
+            android:id="@+id/CardViewLinkdin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:alpha="1"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            motion:layout_constraintStart_toEndOf="@id/CardViewPlayStore"
+            motion:layout_constraintEnd_toEndOf="parent"
+            />
+        <Constraint
+            android:id="@+id/ExtendedFloatingActionButtonMore"
+            android:alpha="0"/>
+        <Constraint android:id="@+id/guideline" />
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/state3">
+        <Constraint
+            android:id="@+id/cardViewBackground"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/textViewTitle"
+            android:alpha="0"/>
+        <Constraint
+            android:id="@+id/whiteShadow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="4dp"
+            android:alpha="1"
+            android:layout_marginTop="2dp"
+            motion:layout_constraintTop_toBottomOf="@id/CardViewMail" />
+        <Constraint
+            android:id="@+id/details"
+            android:alpha="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/CardViewPlayStore"/>
+        <Constraint
+            android:id="@+id/imageViewProfile"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:rotationX="0"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonCV"
+            android:layout_marginStart="16dp" />
+        <Constraint
+            android:id="@+id/textViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"/>
+        <Constraint
+            android:id="@+id/textViewFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toEndOf="@id/imageViewProfile"
+            motion:layout_constraintTop_toTopOf="@id/imageViewProfile"
+            android:layout_marginStart="16dp"
+            android:elevation="6dp"
+            android:alpha="1"/>
+        <Constraint
+            android:id="@+id/textViewGoal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toEndOf="@id/imageViewProfile"
+            motion:layout_constraintTop_toBottomOf="@id/textViewFullName"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="5dp"
+            android:elevation="6dp"
+            android:alpha="1"/>
+        <Constraint
+            android:id="@+id/floatingActionButtonInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/cardViewBackground"
+            motion:layout_constraintBottom_toBottomOf="@id/cardViewBackground"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:elevation="6dp"
+            android:alpha="1"
+            />
+        <Constraint
+            android:id="@+id/floatingActionButtonCV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/cardViewBackground"
+            motion:layout_constraintBottom_toBottomOf="@id/cardViewBackground"
+            motion:layout_constraintEnd_toStartOf="@id/floatingActionButtonInfo"
+            android:layout_marginEnd="16dp"
+            android:elevation="6dp"
+            android:alpha="1" />
+        <Constraint
+            android:id="@+id/guideline"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            android:layout_marginTop="50dp"
+            />
+        <Constraint
+            android:id="@+id/CardViewPhone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@id/CardViewMail"
+            android:alpha="1"
+            android:layout_marginBottom="2dp"
+
+            />
+        <Constraint
+            android:id="@+id/CardViewMail"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            motion:layout_constraintStart_toEndOf="@id/CardViewPhone"
+            motion:layout_constraintEnd_toStartOf="@id/CardViewGithub"
+            android:alpha="1"
+            />
+        <Constraint
+            android:id="@+id/CardViewGithub"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            motion:layout_constraintStart_toEndOf="@id/CardViewMail"
+            motion:layout_constraintEnd_toStartOf="@id/CardViewPlayStore"
+            android:alpha="1"
+            />
+        <Constraint
+            android:id="@+id/CardViewPlayStore"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            motion:layout_constraintStart_toEndOf="@id/CardViewGithub"
+            motion:layout_constraintEnd_toStartOf="@id/CardViewLinkdin"
+            android:alpha="1"
+            />
+
+        <Constraint
+            android:id="@+id/CardViewLinkdin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:alpha="1"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/floatingActionButtonCV"
+            motion:layout_constraintStart_toEndOf="@id/CardViewPlayStore"
+            motion:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <Constraint
+            android:id="@+id/extendedFloatingActionButtonLess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            />
+        <Constraint
+            android:id="@+id/ExtendedFloatingActionButtonMore"
+            android:alpha="0"/>
+        <Constraint android:id="@+id/guideline" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@+id/state1"
+        motion:duration="1000">
+        <OnSwipe
+            motion:dragDirection="dragDown"
+            motion:onTouchUp="autoComplete"
+            motion:touchAnchorId="@id/imageViewProfile"
+            motion:touchAnchorSide="bottom"
+            motion:touchRegionId="@id/imageViewProfile" />
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:motionTarget="@+id/textViewText"
+                motion:framePosition="90"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/ExtendedFloatingActionButtonMore"
+                motion:framePosition="90"
+                android:alpha="0" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/state1"
+        motion:constraintSetEnd="@+id/state2"
+        >
+        <OnClick motion:targetId="@+id/cardViewBackground"
+            motion:clickAction="toggle"/>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:motionTarget="@+id/textViewText"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/textViewTitle"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/textViewFullName"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/textViewText"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/textViewFullName"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/floatingActionButtonInfo"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/floatingActionButtonCV"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/floatingActionButtonInfo"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/floatingActionButtonCV"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/CardViewPhone"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/CardViewGithub"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/CardViewLinkdin"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/CardViewMail"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/CardViewPlayStore"
+                motion:framePosition="70"
+                android:alpha="0" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/state2"
+        motion:duration="1000">
+        <OnClick motion:targetId="@+id/ExtendedFloatingActionButtonMore"
+            motion:clickAction="toggle"/>
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:motionTarget="@+id/textViewText"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/textViewText"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/textViewFullName"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/textViewText"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/textViewFullName"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/floatingActionButtonInfo"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/floatingActionButtonCV"
+                motion:framePosition="10"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/floatingActionButtonInfo"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/floatingActionButtonCV"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/CardViewPhone"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/CardViewGithub"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/CardViewLinkdin"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/CardViewMail"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/CardViewPlayStore"
+                motion:framePosition="70"
+                android:alpha="0" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/state2"
+        motion:constraintSetEnd="@+id/state3"
+        motion:autoTransition="animateToEnd"
+        motion:duration="2000">
+
+        <KeyFrameSet>
+            <KeyAttribute motion:framePosition="99"
+                motion:motionTarget="@+id/whiteShadow"
+                android:alpha="0"
+                />
+            <KeyAttribute motion:framePosition="80"
+                motion:motionTarget="@+id/textViewGoal"
+                android:alpha="0"
+                />
+            <KeyCycle
+                motion:motionTarget="@+id/CardViewPhone"
+                motion:framePosition="0"
+                android:translationY="10dp"
+                motion:wavePeriod="1"
+                motion:waveShape="sin"/>
+            <KeyCycle
+                motion:motionTarget="@+id/CardViewMail"
+                motion:framePosition="0"
+                android:translationY="20dp"
+                motion:wavePeriod="1"
+                motion:waveShape="sin"/>
+            <KeyCycle
+                motion:motionTarget="@+id/CardViewGithub"
+                motion:framePosition="0"
+                android:translationY="25dp"
+                motion:wavePeriod="1"
+                motion:waveShape="sin"/>
+            <KeyCycle
+                motion:motionTarget="@+id/CardViewPlayStore"
+                motion:framePosition="0"
+                android:translationY="20dp"
+                motion:wavePeriod="1"
+                motion:waveShape="sin"/>
+            <KeyCycle
+                motion:motionTarget="@+id/CardViewLinkdin"
+                motion:framePosition="0"
+                android:translationY="10dp"
+                motion:wavePeriod="1"
+                motion:waveShape="sin"/>
+
+        </KeyFrameSet>
+
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/state3"
+        motion:constraintSetEnd="@+id/start">
+        <OnClick motion:targetId="@id/extendedFloatingActionButtonLess"
+            motion:clickAction="toggle"
+            />
+
+    </Transition>
+
+
+</MotionScene>

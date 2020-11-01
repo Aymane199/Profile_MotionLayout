@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">ProductAnimationV1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ipsumt">Actuellement élève ingénieur en 3ème année à l’Ecole Nationale d’Ingénieurs du Mans
+        et je suis à la recherche d’un stage de fin d’étude, pour une durée de 6 mois et pouvant débuter dès le premier mars.
+        Étant passionné par le développement mobile et les bonnes pratiques de programmation, je cherche à axer ma carrière sur ce domaine.
+
+        \n\n <b>Click here for more</b></string>
+    <string name="fullName">RIZKE Aymane</string>
+    <string name="title">Élève ingénieur à la recherche de stage en développement mobile.</string>
+    <string name="formation">FORMATION</string>
+    <string name="formationDetails">
+        <b>2019-2021</b> Le Mans, France:\n
+        <b>Ingénierie</b> – ENSIM - Spécialité IPS (Interaction Personnes Systèmes).\n\n
+
+        <b>2015-2019</b> Fès, Maroc:\n
+        <b>Ingénierie</b> – ENSA - Spécialité génie informatique.\n\n
+</string>
+    <string name="experience">EXPERIENCE PROFESSIONNELLES</string>
+    <string name="experienceDetails">
+        <b>PrintMall</b> - 2019\n
+        Une application mobile qui présente les produits de l’imprimerie PCo.\n\n
+
+        <b>Management of promoters drinking water operations</b> – 2018\n
+        Un logiciel qui a pour but d’automatiser une procédure suivie par l’office national de l’eau potable.\n\n
+    </string>
+    <string name="competence">COMPETENCE</string>
+    <string name="competenceDetails">
+        <b>Mobile : </b>
+        Android (Java, Kotlin, JetPack, Firebase …).\n\n
+
+
+        <b>Microservices:</b>
+        Symfony, API-Platform, Mysql.\n\n
+
+        <b>Business </b>
+        intelligence : Talend et DataStudio.\n\n
+
+
+        <b>Divers : </b>
+        Unit test, Git, Linux, Conception, Design pattern,Méthode de développement agile Scrum\n\n
+
+        <b>Langues :</b>\n
+        Anglais : Courant\n
+        Français : Courant\n
+        Arabe : Native
+            </string>
+    <string name="interests">INTERESTS</string>
+    <string name="interestDetails">Cuisine, Taekwondo, Music, Gaming. </string>
+    <string name="project">PROJETS</string>
+    <string name="projectDetails">
+        <b>Slink</b>- disponible sur PlayStore\n
+        Une Application mobile utilisé pour :\n
+        -Créer et partager sa propre bibliothèque de lien.\n
+        -Laisser des j’aimes et des commentaires.\n
+        -Être notifier par des actions faites par d’autres utilisateurs\n\n
+
+        <b>Mise en place d’un SI décisionnel</b>\n
+        Un site internet qui permet à l’aministration de prendre les décisions plus facilement.\n\n
+
+        <b>PriceQuery</b>\n
+        Un site internet e-commerce pour une conciergerie de parfum.\n\n
+
+        <b>Dish generator</b>\n
+        Une Application mobile qui génère les repas possible à partir des ingrédients disponible dans votre cuisine.\n\n
+
+        <b>CRM</b>\n
+        Un site internet qui permet la gestion des client pour bute de maximiser la connaissance des clients et, ainsi de mieux comprendre, anticiper et gérer leur besoins.
+
+</string>
+    <string name="goal">
+        <b>Elève ingénieur en génie informatique</b>\n
+        Recherche de stage de fin d’études.
+        Durée de 6 mois à partir de mars 2021
+    </string>
+    <string name="info">
+        <i>MotionLayout</i> is a layout type that helps you manage motion and widget animation in your app.
+        <i>MotionLayout</i> is a subclass of ConstraintLayout and builds upon its rich layout capabilities.
+        As part of the ConstraintLayout library, <i>MotionLayout</i> is available as a support library and is backwards-compatible to API level 14.
+        This project is a simple example of <i>MotionLayout</i> usage.
+    </string>
+
+</resources>
